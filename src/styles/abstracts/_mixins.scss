@@ -1,0 +1,15 @@
+@mixin declare-font-face(
+    $font-family,
+    $file-path,
+    $file-name,
+    $weight,
+    $format
+) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}/#{$file-name}.#{$format}') format('$format');
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+    }
+}

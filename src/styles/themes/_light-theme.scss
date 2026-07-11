@@ -1,0 +1,14 @@
+@use '@angular/material' as mat;
+@use '../abstracts' as ds;
+@use '../typography' as typo;
+
+$restaurant-light-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: ds.$primary-palette,
+            accent: ds.$accent-palette,
+        ),
+        typography: typo.$inter-typography,
+        density: 0,
+    )
+);

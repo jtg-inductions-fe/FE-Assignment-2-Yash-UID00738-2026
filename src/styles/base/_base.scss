@@ -1,0 +1,9 @@
+@use '../abstracts' as ds;
+
+html,
+body {
+    height: 100%;
+    background-color: ds.get-neutral(background);
+    color: ds.get-neutral(text-main);
+    font-family: ds.$font-stack;
+}

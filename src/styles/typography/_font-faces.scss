@@ -1,0 +1,41 @@
+@use '../abstracts' as ds;
+
+@include ds.declare-font-face(
+    'Inter',
+    ds.$font-path-inter,
+    'Inter-Regular',
+    ds.get-font-weight(regular),
+    'woff2'
+);
+
+@include ds.declare-font-face(
+    'Inter',
+    ds.$font-path-inter,
+    'Inter-Medium',
+    ds.get-font-weight(medium),
+    'woff2'
+);
+
+@include ds.declare-font-face(
+    'Inter',
+    ds.$font-path-inter,
+    'Inter-Bold',
+    ds.get-font-weight(semibold),
+    'woff2'
+);
+
+@include ds.declare-font-face(
+    'Inter',
+    ds.$font-path-inter,
+    'Inter-ExtraBold',
+    ds.get-font-weight(bold),
+    'woff2'
+);
+
+@include ds.declare-font-face(
+    'Inter',
+    ds.$font-path-inter,
+    'Inter-Black',
+    ds.get-font-weight(black),
+    'woff2'
+);

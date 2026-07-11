@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@use '../abstracts' as ds;
+
+$inter-typography: mat.define-typography-config(
+    $font-family: ds.$font-stack,
+
+    $headline-1: mat.define-typography-level(
+            $font-size: ds.rem(32),
+            $line-height: ds.rem(40),
+            $font-weight: ds.get-font-weight(bold),
+        ),
+    $headline-4: mat.define-typography-level(
+            $font-size: ds.rem(24),
+            $line-height: ds.rem(32),
+            $font-weight: ds.get-font-weight(bold),
+        ),
+    $headline-6: mat.define-typography-level(
+            $font-size: ds.rem(18),
+            $line-height: ds.rem(28),
+            $font-weight: ds.get-font-weight(semibold),
+        ),
+    $subtitle-2: mat.define-typography-level(
+            $font-size: ds.rem(14),
+            $line-height: ds.rem(20),
+            $font-weight: ds.get-font-weight(bold),
+        ),
+    $body-1: mat.define-typography-level(
+            $font-size: ds.rem(14),
+            $line-height: ds.rem(20),
+            $font-weight: ds.get-font-weight(regular),
+        ),
+    $caption: mat.define-typography-level(
+            $font-size: ds.rem(12),
+            $line-height: ds.rem(16),
+            $font-weight: ds.get-font-weight(regular),
+        ),
+    $button: mat.define-typography-level(
+            $font-size: ds.rem(14),
+            $line-height: ds.rem(20),
+            $font-weight: ds.get-font-weight(bold),
+        ),
+);
