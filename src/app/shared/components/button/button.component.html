@@ -1,0 +1,49 @@
+<ng-container [ngSwitch]="variant">
+    <button
+        *ngSwitchCase="'basic'"
+        mat-button
+        [color]="color"
+        [type]="type"
+        [disabled]="disabled"
+        [class]="customClass"
+        (click)="onClick($event)"
+    >
+        <ng-content></ng-content>
+    </button>
+
+    <button
+        *ngSwitchCase="'flat'"
+        mat-flat-button
+        [color]="color"
+        [type]="type"
+        [disabled]="disabled"
+        [class]="customClass"
+        (click)="onClick($event)"
+    >
+        <ng-content></ng-content>
+    </button>
+
+    <button
+        *ngSwitchCase="'stroked'"
+        mat-stroked-button
+        [color]="color"
+        [type]="type"
+        [disabled]="disabled"
+        [class]="customClass"
+        (click)="onClick($event)"
+    >
+        <ng-content></ng-content>
+    </button>
+
+    <button
+        *ngSwitchCase="'raised'"
+        mat-raised-button
+        [color]="color"
+        [type]="type"
+        [disabled]="disabled"
+        [class]="customClass"
+        (click)="onClick($event)"
+    >
+        <ng-content></ng-content>
+    </button>
+</ng-container>

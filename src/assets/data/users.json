@@ -1,0 +1,23 @@
+[
+    {
+        "id": "USR-1001",
+        "name": "Pizza Palace Owner",
+        "role": "owner",
+        "email": "owner1@restaurant.com",
+        "password": "password123"
+    },
+    {
+        "id": "USR-1002",
+        "name": "Burger Bistro Owner",
+        "role": "owner",
+        "email": "owner2@restaurant.com",
+        "password": "password123"
+    },
+    {
+        "id": "USR-1003",
+        "name": "USA Admin",
+        "role": "admin",
+        "email": "admin@usa.com",
+        "password": "password123"
+    }
+]
