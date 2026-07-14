@@ -4,23 +4,23 @@
 
 #### Developer Checklist
 
-[ ] Documentation added at appropriate places
+- [ ] Documentation added at appropriate places
 
-[ ] UI & Responsiveness verified if needed
+- [ ] UI & Responsiveness verified if needed
 
-[ ] Tested Cross-browser / Cross-platform
+- [ ] Tested Cross-browser / Cross-platform
 
-[ ] Self review complete
+- [ ] Self review complete
 
-[ ] Lint issues resolved
+- [ ] Lint issues resolved
 
 #### Review Checklist
 
-[ ] Checked edge cases
+- [ ] Checked edge cases
 
-[ ] Reviewed code and documentation
+- [ ] Reviewed code and documentation
 
-[ ] Verified best practices
+- [ ] Verified best practices
 
 #### Screenshots
 

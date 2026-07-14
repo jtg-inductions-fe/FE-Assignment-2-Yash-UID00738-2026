@@ -7,3 +7,22 @@ body {
     color: ds.get-neutral(text-main);
     font-family: ds.$font-stack;
 }
+
+.mat-headline-1,
+.mat-headline-2,
+.mat-headline-3,
+.mat-headline-4,
+.mat-headline-5,
+.mat-headline-6 {
+    color: ds.get-neutral(text-main);
+    margin: 0;
+}
+
+.mat-subtitle-1,
+.mat-subtitle-2,
+.mat-body-1,
+.mat-body-2,
+.mat-caption {
+    color: ds.get-neutral(text-muted);
+    margin: 0;
+}

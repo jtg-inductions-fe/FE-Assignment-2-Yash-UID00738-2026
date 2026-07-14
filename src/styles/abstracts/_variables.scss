@@ -84,6 +84,14 @@ $neutrals: (
     background: #f9fafb,
     surface: #ffffff,
     border: #e5e7eb,
-    text-main: #111827,
-    text-muted: #6b7280,
+    text-main: rgba(black, 87%),
+    text-muted: rgba(black, 60%),
 );
+
+$size-xs: 16px;
+$size-sm: 18px;
+$size-md: 20px;
+$size-lg: 24px;
+$size-xl: 32px;
+$size-2xl: 48px;
+$size-3xl: 64px;
