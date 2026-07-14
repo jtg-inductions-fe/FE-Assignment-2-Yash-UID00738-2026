@@ -1,7 +1,7 @@
 <mat-card class="login-card">
     <mat-card-content>
         <div class="login-header">
-            <h2 class="mat-headline-3 login-header__heading">
+            <h2 class="mat-headline-2 login-header__heading">
                 Restaurant Portal
             </h2>
             <p class="mat-body-1 login-header__subheading">
@@ -52,7 +52,7 @@
                     mat-icon-button
                     matSuffix
                     (click)="hide = !hide"
-                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-label]="hide ? 'Show password' : 'Hide password'"
                     [attr.aria-pressed]="hide"
                 >
                     <mat-icon>{{
