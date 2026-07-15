@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth/auth.guard';
 import { guestGuard } from './core/guards/guest/guest.guard';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 const routes: Routes = [
     {
@@ -28,6 +29,10 @@ const routes: Routes = [
         path: '',
         redirectTo: 'auth/login',
         pathMatch: 'full',
+    },
+    {
+        path: '**',
+        component: NotFoundComponent,
     },
 ];
 

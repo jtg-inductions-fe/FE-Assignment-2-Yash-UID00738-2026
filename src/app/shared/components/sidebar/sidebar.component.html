@@ -1,0 +1,20 @@
+<aside class="sidebar">
+    <!-- Top Section: Role-Specific Links -->
+    <div class="sidebar__top">
+        <nav class="sidebar__nav">
+            <!-- We will build app-nav-item in the next step -->
+            <app-nav-item *ngFor="let item of navItems" [item]="item">
+            </app-nav-item>
+        </nav>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Bottom Section: Common Links (Profile, Gallery, Help) -->
+    <div class="sidebar__bottom">
+        <nav class="sidebar__nav">
+            <app-nav-item *ngFor="let item of commonItems" [item]="item">
+            </app-nav-item>
+        </nav>
+    </div>
+</aside>

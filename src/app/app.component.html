@@ -1,2 +1,12 @@
+<!-- The Header sits across the very top -->
 <app-header></app-header>
-<router-outlet></router-outlet>
+
+<div class="dashboard-layout">
+    <!-- The Sidebar sits fixed on the left -->
+    <app-sidebar></app-sidebar>
+
+    <!-- The main content area changes based on the URL -->
+    <main class="dashboard-content">
+        <router-outlet></router-outlet>
+    </main>
+</div>

@@ -1,0 +1,72 @@
+@use 'sass:map';
+@use '../../../../styles/abstracts/variables' as vars;
+@use '../../../../styles/abstracts/functions' as fn;
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: fn.rem(12) fn.rem(16);
+    border-radius: fn.rem(8);
+    cursor: pointer;
+    color: fn.get-neutral(text-muted);
+    transition: all 0.2s ease;
+    user-select: none;
+    outline: none;
+
+    // Hover state
+    &:hover {
+        background-color: fn.get-neutral(background);
+        color: fn.get-neutral(text-main);
+    }
+
+    // Active state when the route matches
+    &.active {
+        background-color: map.get(vars.$primary-map, 50);
+        color: map.get(vars.$primary-map, 500);
+
+        .nav-item__icon {
+            color: map.get(vars.$primary-map, 500);
+        }
+    }
+
+    &__icon {
+        margin-right: fn.rem(12);
+        font-size: fn.rem(20);
+        width: fn.rem(20);
+        height: fn.rem(20);
+    }
+
+    &__label {
+        flex-grow: 1;
+        font-weight: fn.get-font-weight(medium);
+        font-size: fn.rem(14);
+    }
+
+    &__badge {
+        background-color: map.get(
+            vars.$accent-map,
+            500
+        ); // Red from your accent palette
+        color: white;
+        font-size: fn.rem(12);
+        font-weight: fn.get-font-weight(bold);
+        padding: fn.rem(2) fn.rem(6);
+        border-radius: fn.rem(12);
+        margin-right: fn.rem(8);
+        line-height: 1;
+    }
+
+    &__chevron {
+        font-size: fn.rem(20);
+        width: fn.rem(20);
+        height: fn.rem(20);
+        color: fn.get-neutral(text-muted);
+    }
+}
+
+.nav-item__children {
+    display: flex;
+    flex-direction: column;
+    gap: fn.rem(4);
+    margin-top: fn.rem(4);
+}

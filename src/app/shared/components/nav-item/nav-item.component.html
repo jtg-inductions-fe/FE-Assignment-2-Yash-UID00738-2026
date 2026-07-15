@@ -1,0 +1,35 @@
+<!-- The Main Link/Button -->
+<div
+    class="nav-item"
+    [class.active]="isActive"
+    [style.padding-left]="depth * 16 + 16 + 'px'"
+    (click)="toggleOrNavigate()"
+    tabindex="0"
+>
+    <!-- Icon -->
+    <mat-icon class="nav-item__icon" *ngIf="item.icon">{{
+        item.icon
+    }}</mat-icon>
+
+    <!-- Label -->
+    <span class="nav-item__label">{{ item.label }}</span>
+
+    <!-- Notification Badge -->
+    <span class="nav-item__badge" *ngIf="item.badge">{{ item.badge }}</span>
+
+    <!-- Expand/Collapse Chevron -->
+    <mat-icon class="nav-item__chevron" *ngIf="item.children">
+        {{ isExpanded ? 'expand_less' : 'expand_more' }}
+    </mat-icon>
+</div>
+
+<!-- THE RECURSION: If children exist and it is expanded, call itself -->
+<div class="nav-item__children" *ngIf="item.children && isExpanded">
+    <app-nav-item
+        *ngFor="let child of item.children"
+        [item]="child"
+        [depth]="depth + 1"
+    >
+        <!-- Increase depth by 1 for children -->
+    </app-nav-item>
+</div>

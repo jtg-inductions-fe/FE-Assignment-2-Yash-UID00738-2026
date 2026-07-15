@@ -6,9 +6,18 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavItemComponent } from './components/nav-item/nav-item.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
-    declarations: [ButtonComponent, HeaderComponent],
+    declarations: [
+        ButtonComponent,
+        HeaderComponent,
+        SidebarComponent,
+        NavItemComponent,
+        NotFoundComponent,
+    ],
     imports: [
         CommonModule,
         MatButtonModule,
@@ -16,6 +25,11 @@ import { MatIconModule } from '@angular/material/icon';
         MatDividerModule,
         MatIconModule,
     ],
-    exports: [ButtonComponent, HeaderComponent],
+    exports: [
+        ButtonComponent,
+        HeaderComponent,
+        SidebarComponent,
+        NotFoundComponent,
+    ],
 })
 export class SharedModule {}

@@ -1,0 +1,18 @@
+@use '../../../../styles/abstracts/variables' as vars;
+@use '../../../../styles/abstracts/functions' as fn;
+
+.dashboard-layout {
+    display: flex;
+    // Subtract the header height (64px) so the layout takes up exactly the rest of the screen
+    height: calc(100vh - fn.rem(64));
+    overflow: hidden;
+}
+
+.dashboard-content {
+    flex-grow: 1; // Take up all remaining width to the right of the sidebar
+    background-color: fn.get-neutral(
+        background
+    ); // Very light gray background for the main area
+    padding: fn.rem(32);
+    overflow-y: auto; // Allow the main content to scroll independently
+}
