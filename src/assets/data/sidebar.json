@@ -23,7 +23,17 @@
                 { "label": "Roles", "path": "/admin-dashboard/access/roles" },
                 {
                     "label": "Permissions",
-                    "path": "/admin-dashboard/access/permissions"
+                    "path": "/admin-dashboard/access/permissions",
+                    "children": [
+                        {
+                            "label": "dRoles2",
+                            "path": "/admin-dashboard/access/roles2"
+                        },
+                        {
+                            "label": "dPermissions2",
+                            "path": "/admin-dashboard/access/permissions2"
+                        }
+                    ]
                 }
             ]
         }

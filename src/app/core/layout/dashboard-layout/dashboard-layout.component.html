@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<mat-sidenav-container class="layout">
+    <mat-sidenav
+        class="sidenav"
+        [mode]="isMobile ? 'over' : 'side'"
+        (closed)="sidebarService.closeSidebar()"
+        [opened]="isMobile ? (sidebarService.sidebarOpen$ | async) : true"
+    >
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="pages-content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

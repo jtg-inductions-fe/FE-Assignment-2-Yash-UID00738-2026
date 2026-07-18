@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 
-$primary-map: (
+$primary-color-map: (
     50: #e2f4ed,
     100: #b6e3d2,
     200: #86d1b4,
@@ -25,9 +25,9 @@ $primary-map: (
     ),
 );
 
-$primary-palette: mat.define-palette($primary-map, 500);
+$primary-palette: mat.define-palette($primary-color-map, 500);
 
-$accent-map: (
+$accent-color-map: (
     50: #fce4e4,
     100: #f8bcbc,
     200: #f38f8f,
@@ -52,10 +52,12 @@ $accent-map: (
     ),
 );
 
-$accent-palette: mat.define-palette($accent-map, 500);
+$accent-palette: mat.define-palette($accent-color-map, 500);
 
+//Font File Variable
 $font-path-inter: '/assets/fonts/inter';
 
+//Font Weight Variables
 $font-weights: (
     thin: 100,
     light: 300,
@@ -67,11 +69,14 @@ $font-weights: (
     black: 900,
 );
 
+//Font Family Variables
 $font-family-primary: 'Inter';
 $font-family-fallback: sans-serif;
 
+//Font Stack Variable
 $font-stack: '"#{$font-family-primary}", #{$font-family-fallback}';
 
+// Semantic Colors
 $semantics: (
     success: #10b981,
     warning: #f59e0b,
@@ -79,7 +84,7 @@ $semantics: (
     info: #3b82f6,
 );
 
-// NEUTRAL COLORS
+// Neutral Colors
 $neutrals: (
     background: #f9fafb,
     surface: #ffffff,
@@ -88,6 +93,7 @@ $neutrals: (
     text-muted: rgba(black, 60%),
 );
 
+//Font Size Variables
 $size-xs: 16px;
 $size-sm: 18px;
 $size-md: 20px;
@@ -96,6 +102,7 @@ $size-xl: 32px;
 $size-2xl: 48px;
 $size-3xl: 64px;
 
+//Shadow Variables
 $shadow-sm:
     0px 1px 5px 0px #0000001f,
     0px 2px 2px 0px #00000024,

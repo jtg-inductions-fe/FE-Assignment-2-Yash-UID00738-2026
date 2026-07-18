@@ -1,0 +1,15 @@
+<div class="sidebar__top">
+    <nav class="sidebar__nav">
+        <app-nav-item *ngFor="let item of navItems" [item]="item">
+        </app-nav-item>
+    </nav>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="sidebar__bottom">
+    <nav class="sidebar__nav">
+        <app-nav-item *ngFor="let item of commonItems" [item]="item">
+        </app-nav-item>
+    </nav>
+</div>
