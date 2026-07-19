@@ -3,7 +3,7 @@
         {
             "label": "Overview",
             "icon": "pie_chart",
-            "path": "/admin-dashboard"
+            "path": "/admin"
         },
         {
             "label": "Restaurants",
@@ -42,7 +42,7 @@
         {
             "label": "Overview",
             "icon": "pie_chart",
-            "path": "/owner-dashboard"
+            "path": "/owner"
         },
         {
             "label": "Menu",

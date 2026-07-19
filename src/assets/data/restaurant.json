@@ -1,0 +1,104 @@
+[
+    {
+        "id": "pizza-palace",
+        "name": "Pizza Palace",
+        "stats": [
+            {
+                "title": "Total Revenue",
+                "value": "$120.50",
+                "icon": "attach_money",
+                "iconColor": "#0e9f6e",
+                "iconBgColor": "#e2f4ed"
+            },
+            {
+                "title": "Total Orders",
+                "value": "6",
+                "icon": "shopping_cart",
+                "iconColor": "#3b82f6",
+                "iconBgColor": "#e1effe"
+            },
+            {
+                "title": "Completed Orders",
+                "value": "3",
+                "icon": "check_circle",
+                "iconColor": "#f59e0b",
+                "iconBgColor": "#fdf3c7"
+            },
+            {
+                "title": "Active Restaurants",
+                "value": "1",
+                "icon": "restaurant",
+                "iconColor": "#8b5cf6",
+                "iconBgColor": "#ede9fe"
+            }
+        ],
+        "topCustomers": [
+            {
+                "id": 1,
+                "imageUrl": "assets/images/profile-pic.webp",
+                "primaryText": "Albert Wright",
+                "secondaryText": "albertwright@demo.com",
+                "valueText": "$60"
+            }
+        ],
+        "topDishes": [
+            {
+                "id": 101,
+                "primaryText": "Margherita Pizza",
+                "secondaryText": "Pizza Palace",
+                "valueText": "3 orders"
+            }
+        ]
+    },
+    {
+        "id": "burger-bistro",
+        "name": "Burger Bistro",
+        "stats": [
+            {
+                "title": "Total Revenue",
+                "value": "$80.00",
+                "icon": "attach_money",
+                "iconColor": "#0e9f6e",
+                "iconBgColor": "#e2f4ed"
+            },
+            {
+                "title": "Total Orders",
+                "value": "4",
+                "icon": "shopping_cart",
+                "iconColor": "#3b82f6",
+                "iconBgColor": "#e1effe"
+            },
+            {
+                "title": "Completed Orders",
+                "value": "2",
+                "icon": "check_circle",
+                "iconColor": "#f59e0b",
+                "iconBgColor": "#fdf3c7"
+            },
+            {
+                "title": "Active Restaurants",
+                "value": "1",
+                "icon": "restaurant",
+                "iconColor": "#8b5cf6",
+                "iconBgColor": "#ede9fe"
+            }
+        ],
+        "topCustomers": [
+            {
+                "id": 2,
+                "imageUrl": "assets/images/profile-pic.webp",
+                "primaryText": "Karen Nelson",
+                "secondaryText": "karennelson@demo.com",
+                "valueText": "$58"
+            }
+        ],
+        "topDishes": [
+            {
+                "id": 104,
+                "primaryText": "Cheeseburger",
+                "secondaryText": "Burger Bistro",
+                "valueText": "2 orders"
+            }
+        ]
+    }
+]

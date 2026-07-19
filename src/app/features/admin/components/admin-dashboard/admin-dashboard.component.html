@@ -1,0 +1,66 @@
+<div class="admin-dashboard" *ngIf="dashboardData as data">
+    <header class="dashboard-header">
+        <div class="header-titles">
+            <h1 class="mat-headline-1">Overview Dashboard</h1>
+            <p class="mat-subtitle-1">
+                System administrator overview panel. Impersonate owners or view
+                aggregate metrics.
+            </p>
+        </div>
+
+        <div class="header-actions">
+            <mat-form-field appearance="outline" class="restaurant-select">
+                <mat-label>View Dashboard As</mat-label>
+
+                <mat-select
+                    value="all"
+                    (selectionChange)="onRestaurantChange($event.value)"
+                >
+                    <mat-option value="all">All Restaurants</mat-option>
+
+                    <mat-option
+                        *ngFor="let restaurant of allRestaurants"
+                        [value]="restaurant.id"
+                    >
+                        {{ restaurant.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </header>
+
+    <app-stat-list [stats]="data.stats"></app-stat-list>
+
+    <div class="report-actions">
+        <div class="report-text">
+            <h3 class="mat-headline-6">Report Generator</h3>
+            <p class="mat-subtitle-2">
+                Generate performance reports for the selected restaurant
+                context.
+            </p>
+        </div>
+
+        <div class="report-buttons">
+            <app-button variant="stroked" color="primary" class="report-btn">
+                <mat-icon>bar_chart</mat-icon>
+                Top 10 Ordered Items
+            </app-button>
+
+            <app-button variant="raised" color="primary" class="report-btn">
+                <mat-icon>group_work</mat-icon>
+                Frequently Bought Together
+            </app-button>
+        </div>
+    </div>
+
+    <div class="lists-grid">
+        <app-dashboard-list
+            title="Top Customers"
+            [items]="data.topCustomers"
+        ></app-dashboard-list>
+        <app-dashboard-list
+            title="Top Selling Dishes"
+            [items]="data.topDishes"
+        ></app-dashboard-list>
+    </div>
+</div>

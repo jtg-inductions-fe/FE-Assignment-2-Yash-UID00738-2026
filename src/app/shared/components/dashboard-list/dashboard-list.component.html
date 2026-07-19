@@ -1,0 +1,28 @@
+<div class="dashboard-list">
+    <div class="dashboard-list__header">
+        <h2 class="mat-headline-5">{{ title }}</h2>
+    </div>
+
+    <div class="dashboard-list__body">
+        <div
+            class="list-item"
+            *ngFor="let item of items; let last = last"
+            [class.border-bottom]="!last"
+        >
+            <div class="list-item__avatar" *ngIf="item.imageUrl">
+                <img [src]="item.imageUrl" [alt]="item.primaryText" />
+            </div>
+
+            <div class="list-item__text">
+                <h4 class="mat-headline-5 list-item__primary">
+                    {{ item.primaryText }}
+                </h4>
+                <p class="mat-subtitle-2">{{ item.secondaryText }}</p>
+            </div>
+
+            <div class="list-item__value mat-headline-5">
+                {{ item.valueText }}
+            </div>
+        </div>
+    </div>
+</div>

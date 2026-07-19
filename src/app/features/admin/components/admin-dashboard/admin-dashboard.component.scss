@@ -1,0 +1,71 @@
+@use '../../../../../styles/abstracts' as ds;
+
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: ds.rem(24);
+    padding: ds.rem(18);
+    background-color: ds.get-neutral(surface);
+    min-height: 100%;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .header-titles {
+        display: flex;
+        flex-direction: column;
+        gap: ds.rem(4);
+    }
+
+    .restaurant-select {
+        width: ds.rem(260);
+    }
+}
+
+.report-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: ds.get-neutral(surface);
+    border: 1px solid ds.get-neutral(border);
+    border-radius: ds.rem(12);
+    padding: ds.rem(12) ds.rem(12);
+
+    .report-buttons {
+        display: flex;
+        gap: ds.rem(16);
+    }
+}
+
+.lists-grid {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: ds.rem(16);
+}
+
+@media (max-width: 1024px) {
+    .lists-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: ds.rem(16);
+    }
+    .report-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: ds.rem(16);
+        .report-buttons {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+}
