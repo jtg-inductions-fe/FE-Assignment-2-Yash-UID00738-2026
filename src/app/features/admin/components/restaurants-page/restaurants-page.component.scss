@@ -1,0 +1,35 @@
+@use '../../../../../styles/abstracts' as ds;
+
+.restaurants-page {
+    padding: ds.rem(24);
+    background-color: ds.get-neutral(surface);
+    min-height: 100%;
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: ds.rem(24);
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: ds.rem(24);
+            margin-bottom: ds.rem(24);
+        }
+    }
+
+    .header-titles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table-container {
+        box-shadow: ds.$shadow-md;
+        border-radius: ds.rem(12);
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            overflow-x: scroll;
+        }
+    }
+}

@@ -2,102 +2,56 @@
     {
         "id": "pizza-palace",
         "name": "Pizza Palace",
-        "stats": [
-            {
-                "title": "Total Revenue",
-                "value": "$120.50",
-                "icon": "attach_money",
-                "iconColor": "#0e9f6e",
-                "iconBgColor": "#e2f4ed"
-            },
-            {
-                "title": "Total Orders",
-                "value": "6",
-                "icon": "shopping_cart",
-                "iconColor": "#3b82f6",
-                "iconBgColor": "#e1effe"
-            },
-            {
-                "title": "Completed Orders",
-                "value": "3",
-                "icon": "check_circle",
-                "iconColor": "#f59e0b",
-                "iconBgColor": "#fdf3c7"
-            },
-            {
-                "title": "Active Restaurants",
-                "value": "1",
-                "icon": "restaurant",
-                "iconColor": "#8b5cf6",
-                "iconBgColor": "#ede9fe"
-            }
-        ],
+        "address": "123 Pepperoni Rd, Naples",
+        "owners": ["owner1@restaurant.com", "pizza_guy@gmail.com"],
+        "metrics": {
+            "totalRevenue": 60.0,
+            "totalOrders": 6,
+            "completedOrders": 3
+        },
         "topCustomers": [
             {
                 "id": 1,
                 "imageUrl": "assets/images/profile-pic.webp",
-                "primaryText": "Albert Wright",
-                "secondaryText": "albertwright@demo.com",
-                "valueText": "$60"
+                "name": "Albert Wright",
+                "email": "albertwright@demo.com",
+                "purchaseAmount": "$60"
             }
         ],
         "topDishes": [
             {
                 "id": 101,
-                "primaryText": "Margherita Pizza",
-                "secondaryText": "Pizza Palace",
-                "valueText": "3 orders"
+                "dishName": "Margherita Pizza",
+                "restaurantName": "Pizza Palace",
+                "ordersQuantity": "3 orders"
             }
         ]
     },
     {
         "id": "burger-bistro",
         "name": "Burger Bistro",
-        "stats": [
-            {
-                "title": "Total Revenue",
-                "value": "$80.00",
-                "icon": "attach_money",
-                "iconColor": "#0e9f6e",
-                "iconBgColor": "#e2f4ed"
-            },
-            {
-                "title": "Total Orders",
-                "value": "4",
-                "icon": "shopping_cart",
-                "iconColor": "#3b82f6",
-                "iconBgColor": "#e1effe"
-            },
-            {
-                "title": "Completed Orders",
-                "value": "2",
-                "icon": "check_circle",
-                "iconColor": "#f59e0b",
-                "iconBgColor": "#fdf3c7"
-            },
-            {
-                "title": "Active Restaurants",
-                "value": "1",
-                "icon": "restaurant",
-                "iconColor": "#8b5cf6",
-                "iconBgColor": "#ede9fe"
-            }
-        ],
+        "address": "456 Patty Ave, Austin",
+        "owners": ["owner2@restaurant.com", "burger_queen@gmail.com"],
+        "metrics": {
+            "totalRevenue": 600.0,
+            "totalOrders": 4,
+            "completedOrders": 2
+        },
         "topCustomers": [
             {
-                "id": 2,
+                "id": 1,
                 "imageUrl": "assets/images/profile-pic.webp",
-                "primaryText": "Karen Nelson",
-                "secondaryText": "karennelson@demo.com",
-                "valueText": "$58"
+                "name": "Albert Wright 2",
+                "email": "albertwright@demo.com",
+                "purchaseAmount": "$600"
             }
         ],
         "topDishes": [
             {
-                "id": 104,
-                "primaryText": "Cheeseburger",
-                "secondaryText": "Burger Bistro",
-                "valueText": "2 orders"
+                "id": 101,
+                "dishName": "Cheeze Pizza",
+                "restaurantName": "Pizza Palace",
+                "ordersQuantity": "5 orders"
             }
         ]
     }

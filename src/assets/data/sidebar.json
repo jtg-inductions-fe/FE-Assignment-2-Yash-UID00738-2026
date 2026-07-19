@@ -8,12 +8,12 @@
         {
             "label": "Restaurants",
             "icon": "restaurant",
-            "path": "/admin-dashboard/restaurants"
+            "path": "/admin/restaurants"
         },
         {
             "label": "Messages",
             "icon": "monitor",
-            "path": "/admin-dashboard/messages",
+            "path": "/admin/messages",
             "badge": 1
         },
         {
