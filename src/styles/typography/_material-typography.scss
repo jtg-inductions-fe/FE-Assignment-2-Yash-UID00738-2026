@@ -1,0 +1,67 @@
+@use '@angular/material' as mat;
+@use '../abstracts' as ds;
+
+$inter-typography: mat.define-typography-config(
+    $font-family: ds.$font-stack,
+
+    $headline-1: mat.define-typography-level(
+            $font-size: ds.rem(48),
+            $line-height: ds.rem(62.5),
+            $font-weight: ds.get-font-weight(bold),
+        ),
+    $headline-2: mat.define-typography-level(
+            $font-size: ds.rem(20),
+            $line-height: ds.rem(30),
+            $font-weight: ds.get-font-weight(semibold),
+        ),
+    $headline-3: mat.define-typography-level(
+            $font-size: ds.rem(20),
+            $line-height: ds.rem(30),
+            $font-weight: ds.get-font-weight(bold),
+        ),
+    $headline-4: mat.define-typography-level(
+            $font-size: ds.rem(16),
+            $line-height: ds.rem(24),
+            $font-weight: ds.get-font-weight(medium),
+        ),
+    $headline-5: mat.define-typography-level(
+            $font-size: ds.rem(16),
+            $line-height: ds.rem(24),
+            $font-weight: ds.get-font-weight(bold),
+        ),
+    $headline-6: mat.define-typography-level(
+            $font-size: ds.rem(16),
+            $line-height: ds.rem(24),
+            $font-weight: ds.get-font-weight(semibold),
+        ),
+    $subtitle-1: mat.define-typography-level(
+            $font-size: ds.rem(14),
+            $line-height: ds.rem(20),
+            $font-weight: ds.get-font-weight(medium),
+        ),
+    $subtitle-2: mat.define-typography-level(
+            $font-size: ds.rem(12),
+            $line-height: ds.rem(18),
+            $font-weight: ds.get-font-weight(medium),
+        ),
+    $body-1: mat.define-typography-level(
+            $font-size: ds.rem(12),
+            $line-height: ds.rem(18),
+            $font-weight: ds.get-font-weight(semibold),
+        ),
+    $body-2: mat.define-typography-level(
+            $font-size: ds.rem(12),
+            $line-height: ds.rem(18),
+            $font-weight: ds.get-font-weight(bold),
+        ),
+    $caption: mat.define-typography-level(
+            $font-size: ds.rem(13),
+            $line-height: ds.rem(18),
+            $font-weight: ds.get-font-weight(semibold),
+        ),
+    $button: mat.define-typography-level(
+            $font-size: ds.rem(14),
+            $line-height: ds.rem(21),
+            $font-weight: ds.get-font-weight(semibold),
+        ),
+);

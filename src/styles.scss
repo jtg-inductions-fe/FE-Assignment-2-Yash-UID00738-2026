@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use 'styles/main';
+@use 'styles/themes' as themes;
+@use 'styles/typography/material-typography' as typo;
+
+@include mat.core();
+@include mat.all-component-themes(themes.$restaurant-light-theme);
+
+@include mat.all-component-typographies(typo.$inter-typography);

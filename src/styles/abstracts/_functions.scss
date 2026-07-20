@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'variables' as vars;
+
+// Retrieves font weights
+@function get-font-weight($weight) {
+    @if map.has-key(vars.$font-weights, $weight) {
+        @return map.get(vars.$font-weights, $weight);
+    }
+    @warn "Unknown font weight: '#{$weight}'. Falling back to regular (400).";
+    @return 400;
+}
+
+// Retrieves a semantic color (success, warning, error, info)
+@function get-semantic($state) {
+    @if map.has-key(vars.$semantics, $state) {
+        @return map.get(vars.$semantics, $state);
+    }
+    @warn "Unknown semantic state: '#{$state}'.";
+    @return null;
+}
+
+// Retrieves a neutral color (background, surface, text-main, etc)
+@function get-neutral($type) {
+    @if map.has-key(vars.$neutrals, $type) {
+        @return map.get(vars.$neutrals, $type);
+    }
+    @warn "Unknown neutral type: '#{$type}'.";
+    @return null;
+}
+
+// Converts pixel values directly to rem units (assumes 16px base)
+@function rem($pixels) {
+    @if math.is-unitless($pixels) {
+        @return math.div($pixels, 16) * 1rem;
+    } @else {
+        @error "Do not include the 'px' unit in the rem() function.";
+    }
+}
