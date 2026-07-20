@@ -19,7 +19,7 @@
         "id": "USR-1003",
         "name": "USA Admin",
         "role": "admin",
-        "email": "admin@usa.com",
+        "email": "admin@restaurant.com",
         "password": "password123",
         "dp": "/assets/images/profile-pic.webp"
     }

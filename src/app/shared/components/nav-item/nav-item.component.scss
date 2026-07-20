@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use '../../../../styles/abstracts/variables' as vars;
+@use '../../../../styles/abstracts/functions' as fn;
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: fn.rem(12) fn.rem(16);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: none;
+    width: 100%;
+    border: none;
+    color: fn.get-neutral('text-main');
+
+    &:hover {
+        background-color: fn.get-neutral(background);
+    }
+
+    &.active {
+        background-color: map.get(vars.$primary-color-map, 50);
+
+        .nav-item__icon,
+        .nav-item__label {
+            color: map.get(vars.$primary-color-map, 500);
+        }
+    }
+
+    &__icon {
+        font-size: fn.rem(20);
+        margin-right: fn.rem(8);
+    }
+
+    &__label {
+        flex-grow: 1;
+        font-size: fn.rem(16);
+        line-height: fn.rem(24);
+        font-weight: fn.get-font-weight(medium);
+    }
+
+    &__badge {
+        background-color: map.get(vars.$accent-color-map, 500);
+        color: white;
+        font-size: fn.rem(12);
+        font-weight: fn.get-font-weight(bold);
+        padding: fn.rem(2) fn.rem(6);
+        border-radius: fn.rem(12);
+    }
+
+    &__chevron {
+        font-size: fn.rem(20);
+    }
+}

@@ -1,0 +1,24 @@
+<Button class="nav-item" [class.active]="isActive" (click)="toggleOrNavigate()">
+    <mat-icon class="nav-item__icon" *ngIf="item.icon">{{
+        item.icon
+    }}</mat-icon>
+
+    <span class="nav-item__label">{{ item.label }}</span>
+    <div
+        matBadge
+        matBadgeOverlap="false"
+        matBadgeColor="accent"
+        *ngIf="item.badge"
+    >
+        {{ item.badge }}
+    </div>
+
+    <mat-icon class="nav-item__chevron" *ngIf="item.children">
+        {{ isExpanded ? 'expand_less' : 'expand_more' }}
+    </mat-icon>
+</Button>
+
+<ng-container *ngIf="item.children && isExpanded">
+    <app-nav-item *ngFor="let child of item.children" [item]="child">
+    </app-nav-item>
+</ng-container>
