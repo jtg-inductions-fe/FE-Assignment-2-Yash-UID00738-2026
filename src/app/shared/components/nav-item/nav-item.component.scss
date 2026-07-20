@@ -19,8 +19,6 @@
     }
 
     &.active {
-        background-color: map.get(vars.$primary-color-map, 50);
-
         .nav-item__icon,
         .nav-item__label {
             color: map.get(vars.$primary-color-map, 500);

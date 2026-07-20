@@ -1,0 +1,20 @@
+@use '../../../../styles/abstracts' as ds;
+
+.stat-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: ds.rem(12);
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .stat-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stat-list {
+        grid-template-columns: 1fr;
+    }
+}

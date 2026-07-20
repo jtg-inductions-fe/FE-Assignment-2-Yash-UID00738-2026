@@ -20,7 +20,7 @@ const routes: Routes = [
         canActivate: [authGuard],
         children: [
             {
-                path: 'owner-dashboard',
+                path: 'owner',
                 canActivate: [authGuard],
                 data: { roles: ['owner'] },
                 loadChildren: () =>
@@ -29,7 +29,7 @@ const routes: Routes = [
                     ),
             },
             {
-                path: 'admin-dashboard',
+                path: 'admin',
                 canActivate: [authGuard],
                 data: { roles: ['admin'] },
                 loadChildren: () =>

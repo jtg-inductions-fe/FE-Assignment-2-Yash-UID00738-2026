@@ -15,9 +15,9 @@ export class NotFoundComponent {
 
     navigateToDashboard(): void {
         if (this.authService.getRole() === 'admin') {
-            this.router.navigate(['admin-dashboard']);
+            this.router.navigate(['admin']);
         } else if (this.authService.getRole() === 'owner') {
-            this.router.navigate(['owner-dashboard']);
+            this.router.navigate(['owner']);
         }
     }
 }

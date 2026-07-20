@@ -1,0 +1,42 @@
+@use '../../../../styles/abstracts' as ds;
+
+.dashboard-list {
+    background-color: ds.get-neutral(surface);
+    border: 1px solid ds.get-neutral(border);
+    border-radius: ds.rem(12);
+    box-shadow: ds.$shadow-sm;
+
+    &__header {
+        padding: ds.rem(16) ds.rem(20);
+    }
+
+    &__body {
+        padding-inline: ds.rem(24);
+        padding-bottom: ds.rem(20);
+    }
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: ds.rem(16) 0;
+
+    &.border-bottom {
+        border-bottom: 1px solid ds.get-neutral(border);
+    }
+
+    &__avatar {
+        margin-right: ds.rem(16);
+
+        img {
+            width: ds.rem(40);
+            height: ds.rem(40);
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        flex: 1;
+    }
+}

@@ -1,0 +1,58 @@
+[
+    {
+        "id": "pizza-palace",
+        "name": "Pizza Palace",
+        "address": "123 Pepperoni Rd, Naples",
+        "owners": ["owner1@restaurant.com", "pizza_guy@gmail.com"],
+        "metrics": {
+            "totalRevenue": 60.0,
+            "totalOrders": 6,
+            "completedOrders": 3
+        },
+        "topCustomers": [
+            {
+                "id": 1,
+                "imageUrl": "assets/images/profile-pic.webp",
+                "name": "Albert Wright",
+                "email": "albertwright@demo.com",
+                "purchaseAmount": "$60"
+            }
+        ],
+        "topDishes": [
+            {
+                "id": 101,
+                "dishName": "Margherita Pizza",
+                "restaurantName": "Pizza Palace",
+                "ordersQuantity": "3 orders"
+            }
+        ]
+    },
+    {
+        "id": "burger-bistro",
+        "name": "Burger Bistro",
+        "address": "456 Patty Ave, Austin",
+        "owners": ["owner2@restaurant.com", "burger_queen@gmail.com"],
+        "metrics": {
+            "totalRevenue": 600.0,
+            "totalOrders": 4,
+            "completedOrders": 2
+        },
+        "topCustomers": [
+            {
+                "id": 1,
+                "imageUrl": "assets/images/profile-pic.webp",
+                "name": "Albert Wright 2",
+                "email": "albertwright@demo.com",
+                "purchaseAmount": "$600"
+            }
+        ],
+        "topDishes": [
+            {
+                "id": 101,
+                "dishName": "Cheeze Pizza",
+                "restaurantName": "Pizza Palace",
+                "ordersQuantity": "5 orders"
+            }
+        ]
+    }
+]
