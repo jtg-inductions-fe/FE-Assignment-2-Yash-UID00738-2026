@@ -1,0 +1,9 @@
+@use '../../../../styles/abstracts' as ds;
+
+button {
+    width: 100%;
+}
+
+.btn-shadow {
+    box-shadow: ds.$shadow-sm;
+}
