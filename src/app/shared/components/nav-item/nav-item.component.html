@@ -3,15 +3,13 @@
         item.icon
     }}</mat-icon>
 
-    <span class="nav-item__label">{{ item.label }}</span>
+    <span class="nav-item__label mat-headline-4">{{ item.label }}</span>
     <div
-        matBadge
+        [matBadge]="item.badge"
         matBadgeOverlap="false"
         matBadgeColor="accent"
         *ngIf="item.badge"
-    >
-        {{ item.badge }}
-    </div>
+    ></div>
 
     <mat-icon class="nav-item__chevron" *ngIf="item.children">
         {{ isExpanded ? 'expand_less' : 'expand_more' }}

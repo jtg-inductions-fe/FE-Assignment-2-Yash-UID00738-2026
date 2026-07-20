@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ButtonComponent } from './components/button/button.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
@@ -20,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
+import { MatChipsModule } from '@angular/material/chips';
 @NgModule({
     declarations: [
         ButtonComponent,
@@ -42,6 +44,8 @@ import { MatTableModule } from '@angular/material/table';
         MatCardModule,
         MatTableModule,
         RouterModule,
+        MatChipsModule,
+        ReactiveFormsModule,
     ],
     exports: [
         ButtonComponent,
@@ -60,7 +64,9 @@ import { MatTableModule } from '@angular/material/table';
         MatFormFieldModule,
         MatSelectModule,
         MatTableModule,
+        MatChipsModule,
         RestaurantTableComponent,
+        ReactiveFormsModule,
     ],
 })
 export class SharedModule {}

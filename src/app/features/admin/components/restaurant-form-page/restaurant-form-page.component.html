@@ -1,0 +1,36 @@
+<div class="form-page-container">
+    <header class="page-header">
+        <app-button
+            label="BACK"
+            type="button"
+            variant="stroked"
+            color="primary"
+            class="go-back-btn"
+            routerLink="/admin/restaurants"
+            icon="arrow_back"
+        >
+        </app-button>
+
+        <div class="header-titles">
+            <h1 class="mat-headline-1">
+                {{ isEditMode ? 'Edit Restaurant' : 'Add Restaurant' }}
+            </h1>
+            <p class="mat-subtitle-1">
+                {{
+                    isEditMode
+                        ? 'Update the restaurant name, address, and owners.'
+                        : 'Add a new partner restaurant to the portal.'
+                }}
+            </p>
+        </div>
+    </header>
+
+    <div class="card-container" *ngIf="!isLoading">
+        <app-restaurant-form
+            [initialData]="restaurantData"
+            [isEdit]="isEditMode"
+            class="restaurant-form"
+        >
+        </app-restaurant-form>
+    </div>
+</div>

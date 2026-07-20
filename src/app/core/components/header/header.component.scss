@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../../../../styles/abstracts/variables' as vars;
-@use '../../../../styles/abstracts/functions' as fn;
+@use 'abstracts/variables' as vars;
+@use 'abstracts/functions' as fn;
 
 .header {
     display: flex;

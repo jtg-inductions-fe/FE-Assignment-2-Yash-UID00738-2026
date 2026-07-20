@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardService } from '../../../../core/services/dashboard/dashboard.service';
+import { DashboardService } from '@core/services/dashboard/dashboard.service';
 
 @Component({
     selector: 'app-restaurants-page',

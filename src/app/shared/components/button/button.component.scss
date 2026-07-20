@@ -1,9 +1,9 @@
-@use '../../../../styles/abstracts' as ds;
+@use 'abstracts' as ds;
 
-button {
+.full-width {
     width: 100%;
 }
 
-.btn-shadow {
-    box-shadow: ds.$shadow-sm;
+button {
+    min-height: ds.rem(36);
 }

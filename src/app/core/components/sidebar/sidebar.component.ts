@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AuthService } from '../../services/auth/auth.service';
-import { NavItem, SidebarConfig } from '../../../models/sidebar.model';
+import { AuthService } from '@core/services/auth/auth.service';
+import { NavItem, SidebarConfig } from '@models/sidebar.model';
 
 @Component({
     selector: 'app-sidebar',

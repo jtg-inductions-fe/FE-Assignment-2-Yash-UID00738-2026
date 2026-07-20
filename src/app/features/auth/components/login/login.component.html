@@ -56,7 +56,7 @@
                     [attr.aria-pressed]="hide"
                 >
                     <mat-icon>{{
-                        hide ? 'visibility_off' : 'visibility'
+                        hide ? 'visibility' : 'visibility_off'
                     }}</mat-icon>
                 </button>
 
@@ -71,8 +71,13 @@
                 {{ errorMessage }}
             </mat-error>
 
-            <app-button variant="raised" color="primary" type="submit">
-                LOGIN
+            <app-button
+                label="LOGIN"
+                type="submit"
+                variant="raised"
+                color="primary"
+                [fullWidth]="true"
+            >
             </app-button>
         </form>
     </mat-card-content>

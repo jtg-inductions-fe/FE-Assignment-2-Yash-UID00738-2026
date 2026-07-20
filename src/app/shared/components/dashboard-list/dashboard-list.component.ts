@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DashboardListItem } from '../../../models/dashboard.model';
+import { DashboardListItem } from '@models/dashboard.model';
 
 @Component({
     selector: 'app-dashboard-list',

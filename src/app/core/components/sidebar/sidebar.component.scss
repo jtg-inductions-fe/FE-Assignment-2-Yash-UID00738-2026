@@ -1,11 +1,11 @@
-@use '../../../../styles/abstracts/functions' as fn;
+@use 'abstracts/functions' as fn;
 
 .sidebar {
     &__top {
-        padding: fn.rem(24) fn.rem(16);
+        padding: fn.rem(12) fn.rem(6);
     }
 
     &__bottom {
-        padding: fn.rem(24) fn.rem(16);
+        padding: fn.rem(12) fn.rem(6);
     }
 }

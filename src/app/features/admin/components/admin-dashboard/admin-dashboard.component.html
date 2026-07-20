@@ -10,7 +10,7 @@
 
         <div class="header-actions">
             <mat-form-field appearance="outline" class="restaurant-select">
-                <mat-label>View Dashboard As</mat-label>
+                <mat-label>View Restaurants</mat-label>
 
                 <mat-select
                     (selectionChange)="onRestaurantChange($event.value)"
@@ -41,14 +41,21 @@
         </div>
 
         <div class="report-buttons">
-            <app-button variant="stroked" color="primary" class="report-btn">
-                <mat-icon>bar_chart</mat-icon>
-                Top 10 Ordered Items
+            <app-button
+                label="Top 10 Ordered Items"
+                type="button"
+                variant="stroked"
+                icon="bar_chart"
+                color="primary"
+            >
             </app-button>
-
-            <app-button variant="raised" color="primary" class="report-btn">
-                <mat-icon>group_work</mat-icon>
-                Frequently Bought Together
+            <app-button
+                label="Frequently Bought Together"
+                type="button"
+                variant="flat"
+                icon="group_work"
+                color="primary"
+            >
             </app-button>
         </div>
     </div>

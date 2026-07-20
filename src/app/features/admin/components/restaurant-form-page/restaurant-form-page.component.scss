@@ -1,0 +1,17 @@
+@use 'abstracts' as ds;
+
+.form-page-container {
+    background-color: ds.get-neutral(surface);
+    min-height: 100%;
+    padding: ds.rem(24);
+}
+
+.page-header {
+    margin-bottom: ds.rem(24);
+    display: flex;
+    flex-direction: column;
+    gap: ds.rem(8);
+}
+.go-back-btn {
+    width: fit-content;
+}

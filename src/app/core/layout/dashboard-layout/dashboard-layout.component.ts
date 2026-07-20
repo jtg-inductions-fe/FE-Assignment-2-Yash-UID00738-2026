@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { SidebarService } from '../../services/sidebar/sidebar.service';
+import { SidebarService } from '@core/services/sidebar/sidebar.service';
 
 @Component({
     selector: 'app-secure-layout',

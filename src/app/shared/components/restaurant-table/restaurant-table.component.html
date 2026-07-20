@@ -32,12 +32,14 @@
         <th mat-header-cell *matHeaderCellDef>ACTIONS</th>
         <td mat-cell *matCellDef="let element">
             <app-button
+                label="Edit"
+                type="button"
                 variant="stroked"
-                color="primary"
                 [routerLink]="['edit', element.id]"
+                .
+                color="primary"
+                icon="edit"
             >
-                <mat-icon>edit</mat-icon>
-                Edit
             </app-button>
         </td>
     </ng-container>

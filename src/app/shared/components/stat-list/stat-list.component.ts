@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { StatCardData } from '../../../models/dashboard.model';
+import { StatCardData } from '@models/dashboard.model';
 
 @Component({
     selector: 'app-stat-list',

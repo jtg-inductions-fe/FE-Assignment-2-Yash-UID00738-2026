@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardService } from '../../../../core/services/dashboard/dashboard.service';
-import { DashboardData } from '../../../../models/dashboard.model';
+import { DashboardService } from '@core/services/dashboard/dashboard.service';
+import { DashboardData } from '@models/dashboard.model';
 
 @Component({
     selector: 'app-admin-dashboard',
@@ -14,6 +14,7 @@ export class AdminDashboardComponent implements OnInit {
     constructor(private dashboardService: DashboardService) {}
 
     async ngOnInit(): Promise<void> {
+        //get data through resolver
         this.allRestaurants = await this.dashboardService.getAllRestaurants();
         this.dashboardData = this.buildDashboardData(this.allRestaurants);
     }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavItem } from '../../../models/sidebar.model';
+import { NavItem } from '@models/sidebar.model';
 
 @Component({
     selector: 'app-nav-item',
