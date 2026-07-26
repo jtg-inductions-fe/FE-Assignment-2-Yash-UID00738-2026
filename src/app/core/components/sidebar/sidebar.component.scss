@@ -1,0 +1,11 @@
+@use 'abstracts/functions' as fn;
+
+.sidebar {
+    &__top {
+        padding: fn.rem(12) fn.rem(6);
+    }
+
+    &__bottom {
+        padding: fn.rem(12) fn.rem(6);
+    }
+}

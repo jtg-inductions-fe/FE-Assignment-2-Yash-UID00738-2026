@@ -1,0 +1,9 @@
+@use 'abstracts' as ds;
+
+.full-width {
+    width: 100%;
+}
+
+button {
+    min-height: ds.rem(36);
+}

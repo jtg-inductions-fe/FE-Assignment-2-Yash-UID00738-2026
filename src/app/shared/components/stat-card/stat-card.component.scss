@@ -1,0 +1,40 @@
+@use 'abstracts' as ds;
+
+.stat-card {
+    background-color: ds.get-neutral(surface);
+    border: 1px solid ds.get-neutral(border);
+    border-radius: ds.rem(12);
+    padding: ds.rem(12);
+    height: 100%;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: ds.rem(4);
+    }
+
+    &__value {
+        font-weight: ds.get-font-weight(bold);
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: ds.rem(48);
+        height: ds.rem(48);
+        border-radius: ds.rem(8);
+        flex-shrink: 0;
+
+        mat-icon {
+            font-size: ds.rem(24);
+        }
+    }
+}

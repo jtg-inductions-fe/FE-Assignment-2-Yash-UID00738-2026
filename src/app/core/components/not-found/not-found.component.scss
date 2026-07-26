@@ -1,0 +1,29 @@
+@use 'abstracts/variables' as vars;
+@use 'abstracts/functions' as fn;
+
+.not-found {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: fn.get-neutral(background);
+    text-align: center;
+
+    &__description {
+        font-size: fn.rem(16);
+    }
+
+    &__details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: fn.rem(18);
+    }
+}
+
+.not-found-banner {
+    @media (max-width: vars.$bp-md) {
+        width: 220px;
+        height: 150px;
+    }
+}

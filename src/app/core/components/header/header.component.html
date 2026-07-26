@@ -1,0 +1,40 @@
+<header class="header">
+    <button
+        class="header__toggle-btn"
+        *ngIf="user"
+        (click)="sidebarService.toggleSidebar()"
+    >
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div class="header__logo-container" (click)="navigateToDashboard()">
+        <img
+            src="../../../../assets/images/brand-logo.svg"
+            alt="Restaurant Portal Logo"
+            class="header__logo"
+        />
+    </div>
+
+    <ng-container *ngIf="user">
+        <button class="header__avatar-container" [matMenuTriggerFor]="userMenu">
+            <img [src]="user.dp" alt="User Avatar" class="header__avatar" />
+        </button>
+
+        <mat-menu #userMenu="matMenu" class="user-popup">
+            <div class="user-popup__info">
+                <p class="mat-body-2 user-popup__name">{{ user.name }}</p>
+                <p class="mat-caption user-popup__email">{{ user.email }}</p>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <button
+                mat-menu-item
+                (click)="onLogout()"
+                class="user-popup__logout-btn"
+            >
+                <mat-icon>logout</mat-icon>
+                <span>Logout</span>
+            </button>
+        </mat-menu>
+    </ng-container>
+</header>

@@ -1,0 +1,109 @@
+{
+    "admin": [
+        {
+            "label": "Overview",
+            "icon": "pie_chart",
+            "path": "/admin"
+        },
+        {
+            "label": "Restaurants",
+            "icon": "restaurant",
+            "path": "/admin/restaurants"
+        },
+        {
+            "label": "Messages",
+            "icon": "monitor",
+            "path": "/admin/messages",
+            "badge": 1
+        },
+        {
+            "label": "Access",
+            "icon": "lock",
+            "children": [
+                { "label": "Roles", "path": "/admin-dashboard/access/roles" },
+                {
+                    "label": "Permissions",
+                    "path": "/admin-dashboard/access/permissions",
+                    "children": [
+                        {
+                            "label": "dRoles2",
+                            "path": "/admin-dashboard/access/roles2"
+                        },
+                        {
+                            "label": "dPermissions2",
+                            "path": "/admin-dashboard/access/permissions2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "owner": [
+        {
+            "label": "Overview",
+            "icon": "pie_chart",
+            "path": "/owner"
+        },
+        {
+            "label": "Menu",
+            "icon": "restaurant",
+            "path": "/owner-dashboard/menu"
+        },
+        {
+            "label": "Billing history",
+            "icon": "description",
+            "children": [
+                {
+                    "label": "Invoices",
+                    "path": "/owner-dashboard/billing/invoices"
+                },
+                {
+                    "label": "Payments",
+                    "path": "/owner-dashboard/billing/payments"
+                }
+            ]
+        },
+        {
+            "label": "Inventory",
+            "icon": "shopping_bag",
+            "children": [
+                {
+                    "label": "Stock",
+                    "path": "/owner-dashboard/inventory/stock"
+                },
+                {
+                    "label": "Suppliers",
+                    "path": "/owner-dashboard/inventory/suppliers"
+                }
+            ]
+        },
+        {
+            "label": "Messages",
+            "icon": "monitor",
+            "path": "/owner-dashboard/messages",
+            "badge": 1
+        },
+        {
+            "label": "Access",
+            "icon": "lock",
+            "path": "/owner-dashboard/access"
+        }
+    ],
+    "common": [
+        {
+            "label": "My Profile",
+            "icon": "contact_page",
+            "path": "/profile"
+        },
+        {
+            "label": "Gallery",
+            "icon": "photo_library",
+            "path": "/gallery"
+        },
+        {
+            "label": "Help",
+            "icon": "public",
+            "path": "/help"
+        }
+    ]
+}

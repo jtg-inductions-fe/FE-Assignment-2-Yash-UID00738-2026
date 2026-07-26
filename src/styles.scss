@@ -4,6 +4,5 @@
 @use 'styles/typography/material-typography' as typo;
 
 @include mat.core();
-@include mat.all-component-themes(themes.$restaurant-light-theme);
-
+@include mat.all-component-themes(themes.$light-theme);
 @include mat.all-component-typographies(typo.$inter-typography);

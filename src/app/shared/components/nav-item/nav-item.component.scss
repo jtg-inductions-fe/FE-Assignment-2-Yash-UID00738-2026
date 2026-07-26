@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use 'abstracts/variables' as vars;
+@use 'abstracts/functions' as fn;
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: fn.rem(11) fn.rem(16);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: none;
+    width: 100%;
+    border: none;
+    color: fn.get-neutral('text-main');
+
+    &:hover {
+        background-color: fn.get-neutral(background);
+    }
+
+    &.active {
+        .nav-item__icon,
+        .nav-item__label {
+            color: map.get(vars.$primary-color-map, 500);
+        }
+    }
+
+    &__icon {
+        font-size: fn.rem(20);
+        margin-right: fn.rem(8);
+    }
+
+    &__label {
+        flex-grow: 1;
+        font-size: fn.rem(16);
+        line-height: fn.rem(24);
+        font-weight: fn.get-font-weight(medium);
+    }
+
+    &__badge {
+        margin-right: fn.rem(8);
+    }
+
+    &__chevron {
+        font-size: fn.rem(20);
+    }
+}

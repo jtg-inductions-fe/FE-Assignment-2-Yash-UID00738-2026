@@ -1,0 +1,24 @@
+<div class="not-found">
+    <img
+        src="../../../../assets/images/404.webp"
+        class="not-found-banner"
+        alt="not-found"
+        width="800"
+        height="500"
+    />
+    <div class="not-found__details-container">
+        <h2 class="mat-headline-1">Page Not Found</h2>
+        <p class="not-found__description mat-subtitle-1">
+            Oops! Looks like you followed a bad link. If you think this is a
+            problem with us, please tell us.
+        </p>
+        <app-button
+            (click)="navigateToDashboard()"
+            *ngIf="authService.currentUser$"
+            label="Go back home"
+            type="button"
+            variant="raised"
+            color="primary"
+        ></app-button>
+    </div>
+</div>

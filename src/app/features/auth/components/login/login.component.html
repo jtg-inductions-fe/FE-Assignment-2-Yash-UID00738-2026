@@ -1,0 +1,84 @@
+<mat-card class="login-card">
+    <mat-card-content>
+        <div class="login-header">
+            <h2 class="mat-headline-2 login-header__heading">
+                Restaurant Portal
+            </h2>
+            <p class="mat-body-1 login-header__subheading">
+                Log in to manage orders, menus, and stats.
+            </p>
+        </div>
+
+        <form
+            [formGroup]="loginForm"
+            (ngSubmit)="onLoginSubmit()"
+            class="login-form"
+        >
+            <mat-form-field
+                appearance="outline"
+                class="login-form__email-field"
+                hideRequiredMarker
+            >
+                <mat-label>Email Address</mat-label>
+                <input matInput type="email" formControlName="email" />
+
+                <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+                    Email is required.
+                </mat-error>
+                <mat-error
+                    *ngIf="
+                        loginForm.get('email')?.hasError('email') &&
+                        !loginForm.get('email')?.hasError('required')
+                    "
+                >
+                    Please enter a valid email address.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field
+                appearance="outline"
+                class="login-form__password-field"
+                hideRequiredMarker
+            >
+                <mat-label>Password</mat-label>
+                <input
+                    matInput
+                    [type]="hide ? 'password' : 'text'"
+                    formControlName="password"
+                />
+
+                <button
+                    type="button"
+                    mat-icon-button
+                    matSuffix
+                    (click)="hide = !hide"
+                    [attr.aria-label]="hide ? 'Show password' : 'Hide password'"
+                    [attr.aria-pressed]="hide"
+                >
+                    <mat-icon>{{
+                        hide ? 'visibility' : 'visibility_off'
+                    }}</mat-icon>
+                </button>
+
+                <mat-error
+                    *ngIf="loginForm.get('password')?.hasError('required')"
+                >
+                    Password is required.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-error *ngIf="errorMessage" class="general-error">
+                {{ errorMessage }}
+            </mat-error>
+
+            <app-button
+                label="LOGIN"
+                type="submit"
+                variant="raised"
+                color="primary"
+                [fullWidth]="true"
+            >
+            </app-button>
+        </form>
+    </mat-card-content>
+</mat-card>

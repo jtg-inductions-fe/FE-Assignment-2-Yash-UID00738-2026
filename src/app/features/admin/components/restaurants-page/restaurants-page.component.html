@@ -1,0 +1,28 @@
+<div class="restaurants-page">
+    <header class="page-header">
+        <div class="header-titles">
+            <h1 class="mat-headline-1">Restaurants</h1>
+            <p class="mat-subtitle-1">
+                Manage partner restaurants and ownership list.
+            </p>
+        </div>
+
+        <div class="header-actions">
+            <app-button
+                label="ADD RESTAURANT"
+                type="button"
+                variant="raised"
+                routerLink="new"
+                color="primary"
+                icon="add"
+            >
+            </app-button>
+        </div>
+    </header>
+
+    <div class="table-container">
+        <app-restaurant-table
+            [restaurants]="restaurants"
+        ></app-restaurant-table>
+    </div>
+</div>

@@ -2,7 +2,7 @@
 @use '../abstracts' as ds;
 @use '../typography' as typo;
 
-$restaurant-light-theme: mat.define-light-theme(
+$light-theme: mat.define-light-theme(
     (
         color: (
             primary: ds.$primary-palette,

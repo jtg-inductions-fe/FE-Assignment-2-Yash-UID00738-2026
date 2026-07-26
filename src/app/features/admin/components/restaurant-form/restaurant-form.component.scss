@@ -1,0 +1,23 @@
+@use 'abstracts' as ds;
+
+.restaurant-form {
+    padding: ds.rem(24);
+    box-shadow: ds.$shadow-sm;
+    border-radius: ds.rem(12);
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: ds.$bp-sm) {
+        gap: ds.rem(24);
+    }
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    gap: ds.rem(12);
+    align-self: flex-end;
+}

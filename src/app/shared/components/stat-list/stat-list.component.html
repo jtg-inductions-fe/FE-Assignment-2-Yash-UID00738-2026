@@ -1,0 +1,11 @@
+<div class="stat-list">
+    <app-stat-card
+        *ngFor="let stat of stats"
+        [title]="stat.title"
+        [value]="stat.value"
+        [icon]="stat.icon"
+        [iconColor]="stat.iconColor"
+        [iconBgColor]="stat.iconBgColor"
+    >
+    </app-stat-card>
+</div>
