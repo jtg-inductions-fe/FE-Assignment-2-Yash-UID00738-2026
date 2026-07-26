@@ -11,7 +11,7 @@
         align-items: center;
         margin-bottom: ds.rem(24);
 
-        @media (max-width: 768px) {
+        @media (max-width: ds.$bp-md) {
             flex-direction: column;
             gap: ds.rem(24);
             margin-bottom: ds.rem(24);
@@ -28,7 +28,7 @@
         border-radius: ds.rem(12);
         overflow: hidden;
 
-        @media (max-width: 768px) {
+        @media (max-width: ds.$bp-md) {
             overflow-x: scroll;
         }
     }

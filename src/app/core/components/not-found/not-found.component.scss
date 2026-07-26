@@ -22,7 +22,7 @@
 }
 
 .not-found-banner {
-    @media (max-width: 768px) {
+    @media (max-width: vars.$bp-md) {
         width: 220px;
         height: 150px;
     }

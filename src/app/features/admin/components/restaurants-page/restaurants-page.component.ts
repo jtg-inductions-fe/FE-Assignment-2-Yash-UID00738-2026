@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '@core/services/dashboard/dashboard.service';
+import { Restaurant } from '@models/dashboard.model';
 
 @Component({
     selector: 'app-restaurants-page',
@@ -7,7 +8,7 @@ import { DashboardService } from '@core/services/dashboard/dashboard.service';
     styleUrls: ['./restaurants-page.component.scss'],
 })
 export class RestaurantsPageComponent implements OnInit {
-    restaurants: any[] = [];
+    restaurants: Restaurant[] = [];
 
     constructor(private dashboardService: DashboardService) {}
 

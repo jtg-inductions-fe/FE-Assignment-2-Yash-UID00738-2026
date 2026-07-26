@@ -3,12 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, map } from 'rxjs';
 
 import { User } from '@models/auth.model';
+import { UserRole } from '@models/enums.model';
+import { DATA_URLS } from '@constants/app.constants';
 
 @Injectable({
     providedIn: 'root',
 })
 export class AuthService {
-    private usersUrl = 'assets/data/users.json';
+    private usersUrl = DATA_URLS.USERS;
 
     private currentUserSubject = new BehaviorSubject<User | null>(
         this.getCurrentUser(),
@@ -61,7 +63,7 @@ export class AuthService {
     /**
      * Retrieves the current user's role from localStorage
      */
-    getRole(): string | null {
+    getRole(): UserRole | null {
         const userData = localStorage.getItem('user_data');
 
         if (userData) {

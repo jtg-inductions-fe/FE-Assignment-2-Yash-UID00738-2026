@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '@core/services/auth/auth.service';
 import { Router } from '@angular/router';
+import { AppRoute, UserRole } from '@models/enums.model';
 
 @Component({
     selector: 'app-not-found',
@@ -14,10 +15,10 @@ export class NotFoundComponent {
     ) {}
 
     navigateToDashboard(): void {
-        if (this.authService.getRole() === 'admin') {
-            this.router.navigate(['admin']);
-        } else if (this.authService.getRole() === 'owner') {
-            this.router.navigate(['owner']);
+        if (this.authService.getRole() === UserRole.ADMIN) {
+            this.router.navigate([AppRoute.ADMIN]);
+        } else if (this.authService.getRole() === UserRole.OWNER) {
+            this.router.navigate([AppRoute.OWNER]);
         }
     }
 }

@@ -38,5 +38,10 @@
 
     &__text {
         flex: 1;
+        min-width: 0;
+
+        .mat-subtitle-2 {
+            @include ds.line-clamp(1);
+        }
     }
 }

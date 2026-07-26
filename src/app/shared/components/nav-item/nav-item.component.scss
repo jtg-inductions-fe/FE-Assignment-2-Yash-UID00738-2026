@@ -38,12 +38,7 @@
     }
 
     &__badge {
-        background-color: map.get(vars.$accent-color-map, 500);
-        color: white;
-        font-size: fn.rem(12);
-        font-weight: fn.get-font-weight(bold);
-        padding: fn.rem(2) fn.rem(6);
-        border-radius: fn.rem(12);
+        margin-right: fn.rem(8);
     }
 
     &__chevron {

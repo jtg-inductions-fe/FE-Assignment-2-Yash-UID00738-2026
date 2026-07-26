@@ -1,6 +1,7 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from '@core/services/auth/auth.service';
+import { AppRoute, UserRole } from '@models/enums.model';
 
 export const guestGuard: CanActivateFn = (route, state) => {
     const authService = inject(AuthService);
@@ -8,10 +9,10 @@ export const guestGuard: CanActivateFn = (route, state) => {
 
     if (authService.isLoggedIn()) {
         const role = authService.getRole();
-        if (role === 'admin') {
-            router.navigate(['/admin-dashboard']);
-        } else if (role === 'owner') {
-            router.navigate(['/owner-dashboard']);
+        if (role === UserRole.ADMIN) {
+            router.navigate(['/', AppRoute.ADMIN]);
+        } else if (role === UserRole.OWNER) {
+            router.navigate(['/', AppRoute.OWNER]);
         } else {
             router.navigate(['/']);
         }

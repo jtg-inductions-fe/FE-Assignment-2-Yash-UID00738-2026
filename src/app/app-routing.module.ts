@@ -5,10 +5,11 @@ import { guestGuard } from './core/guards/guest/guest.guard';
 import { AuthLayoutComponent } from './core/layout/auth-layout/auth-layout.component';
 import { DashboardLayoutComponent } from './core/layout/dashboard-layout/dashboard-layout.component';
 import { NotFoundComponent } from './core/components/not-found/not-found.component';
+import { AppRoute, UserRole } from '@models/enums.model';
 
 const routes: Routes = [
     {
-        path: 'auth',
+        path: AppRoute.AUTH,
         component: AuthLayoutComponent,
         canActivate: [guestGuard],
         loadChildren: () =>
@@ -20,18 +21,18 @@ const routes: Routes = [
         canActivate: [authGuard],
         children: [
             {
-                path: 'owner',
+                path: AppRoute.OWNER,
                 canActivate: [authGuard],
-                data: { roles: ['owner'] },
+                data: { roles: [UserRole.OWNER] },
                 loadChildren: () =>
                     import('./features/owner/owner.module').then(
                         (m) => m.OwnerModule,
                     ),
             },
             {
-                path: 'admin',
+                path: AppRoute.ADMIN,
                 canActivate: [authGuard],
-                data: { roles: ['admin'] },
+                data: { roles: [UserRole.ADMIN] },
                 loadChildren: () =>
                     import('./features/admin/admin.module').then(
                         (m) => m.AdminModule,

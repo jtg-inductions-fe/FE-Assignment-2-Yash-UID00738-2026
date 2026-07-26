@@ -12,6 +12,10 @@
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 0.5rem;
+
+    @media (max-width: ds.$bp-sm) {
+        gap: ds.rem(24);
+    }
 }
 
 .login-card {

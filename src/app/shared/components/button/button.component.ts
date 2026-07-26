@@ -22,7 +22,7 @@ export class ButtonComponent {
     @Input() fullWidth = false;
     @Input() icon = '';
     @Input() iconPosition: 'left' | 'right' = 'left';
-    @Input() routerLink?: any;
+    @Input() routerLink?: string | string[];
     @Output() buttonClick = new EventEmitter<Event>();
 
     onClick(event: Event): void {

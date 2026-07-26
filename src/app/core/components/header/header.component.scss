@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use 'abstracts/variables' as vars;
 @use 'abstracts/functions' as fn;
+@use 'abstracts/mixins' as mx;
 
 .header {
     display: flex;
@@ -15,7 +16,7 @@
         display: none;
         background: none;
         border: none;
-        @media (max-width: 768px) {
+        @media (max-width: vars.$bp-md) {
             display: block;
         }
     }
@@ -23,6 +24,7 @@
     &__logo-container {
         width: 35px;
         height: 35px;
+        cursor: pointer;
     }
 
     &__logo {
@@ -62,10 +64,12 @@
     .user-popup__name {
         margin-bottom: fn.rem(4);
         color: fn.get-neutral(text-main);
+        @include mx.line-clamp(1);
     }
 
     .user-popup__email {
         color: fn.get-neutral(text-muted);
+        @include mx.line-clamp(1);
     }
 
     .user-popup__logout-btn {

@@ -15,9 +15,10 @@
         <app-button
             (click)="navigateToDashboard()"
             *ngIf="authService.currentUser$"
+            label="Go back home"
+            type="button"
             variant="raised"
             color="primary"
-            >Go back home</app-button
-        >
+        ></app-button>
     </div>
 </div>

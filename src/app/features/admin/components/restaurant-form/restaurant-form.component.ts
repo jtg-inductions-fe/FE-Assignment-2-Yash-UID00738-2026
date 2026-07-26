@@ -1,13 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {
-    FormBuilder,
-    FormGroup,
-    FormArray,
-    Validators,
-    FormControl,
-} from '@angular/forms';
+import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { Restaurant } from '@models/dashboard.model';
 
 @Component({
     selector: 'app-restaurant-form',
@@ -15,7 +10,7 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
     styleUrls: ['./restaurant-form.component.scss'],
 })
 export class RestaurantFormComponent implements OnInit {
-    @Input() initialData: any = null;
+    @Input() initialData: Restaurant | null = null;
     @Input() isEdit: boolean = false;
 
     restaurantForm = this.fb.group({
@@ -64,7 +59,6 @@ export class RestaurantFormComponent implements OnInit {
     }
 
     removeOwner(index: number): void {
-        console.log(this.owners.value);
         this.owners.value.splice(index, 1);
     }
 

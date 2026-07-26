@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '@core/services/auth/auth.service';
 import { SidebarService } from '@core/services/sidebar/sidebar.service';
 import { User } from '@models/auth.model';
+import { AppRoute, UserRole } from '@models/enums.model';
 
 @Component({
     selector: 'app-header',
@@ -29,5 +30,14 @@ export class HeaderComponent implements OnInit {
     onLogout(): void {
         this.authService.logout();
         this.router.navigate(['/auth/login']);
+    }
+
+    navigateToDashboard(): void {
+        const role = this.authService.getRole();
+        if (role === UserRole.ADMIN) {
+            this.router.navigate(['/', AppRoute.ADMIN]);
+        } else if (role === UserRole.OWNER) {
+            this.router.navigate(['/', AppRoute.OWNER]);
+        }
     }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DashboardService } from '@core/services/dashboard/dashboard.service';
+import { Restaurant } from '@models/dashboard.model';
 
 @Component({
     selector: 'app-restaurant-form-page',
@@ -8,7 +9,7 @@ import { DashboardService } from '@core/services/dashboard/dashboard.service';
     styleUrls: ['./restaurant-form-page.component.scss'],
 })
 export class RestaurantFormPageComponent implements OnInit {
-    restaurantData: any = null;
+    restaurantData: Restaurant | null = null;
     isEditMode = false;
     isLoading = true;
 
@@ -23,7 +24,7 @@ export class RestaurantFormPageComponent implements OnInit {
         if (id) {
             this.isEditMode = true;
             this.restaurantData =
-                await this.dashboardService.getRestaurantById(id);
+                (await this.dashboardService.getRestaurantById(id)) ?? null;
         } else {
             this.isEditMode = false;
             this.restaurantData = null;

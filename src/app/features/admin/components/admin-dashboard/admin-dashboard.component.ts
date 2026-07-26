@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '@core/services/dashboard/dashboard.service';
-import { DashboardData } from '@models/dashboard.model';
+import {
+    DashboardData,
+    Restaurant,
+    StatCardData,
+    TopCustomer,
+    TopDish,
+} from '@models/dashboard.model';
+import { STAT_CARD_ICONS_AND_COLORS } from '@constants/app.constants';
 
 @Component({
     selector: 'app-admin-dashboard',
@@ -9,12 +16,11 @@ import { DashboardData } from '@models/dashboard.model';
 })
 export class AdminDashboardComponent implements OnInit {
     dashboardData!: DashboardData;
-    allRestaurants: any[] = [];
+    allRestaurants: Restaurant[] = [];
 
     constructor(private dashboardService: DashboardService) {}
 
     async ngOnInit(): Promise<void> {
-        //get data through resolver
         this.allRestaurants = await this.dashboardService.getAllRestaurants();
         this.dashboardData = this.buildDashboardData(this.allRestaurants);
     }
@@ -26,11 +32,15 @@ export class AdminDashboardComponent implements OnInit {
             const selectedRestaurant = this.allRestaurants.find(
                 (r) => r.id === selectedId,
             );
-            this.dashboardData = this.buildDashboardData([selectedRestaurant]);
+            if (selectedRestaurant) {
+                this.dashboardData = this.buildDashboardData([
+                    selectedRestaurant,
+                ]);
+            }
         }
     }
 
-    private buildDashboardData(restaurants: any[]): DashboardData {
+    private buildDashboardData(restaurants: Restaurant[]): DashboardData {
         let totalRevenue = 0;
         let totalOrders = 0;
         let completedOrders = 0;
@@ -50,7 +60,7 @@ export class AdminDashboardComponent implements OnInit {
             ),
 
             topCustomers: restaurants.flatMap((r) =>
-                r.topCustomers.map((c: any) => ({
+                r.topCustomers.map((c: TopCustomer) => ({
                     id: c.id,
                     imageUrl: c.imageUrl,
                     primaryText: c.name,
@@ -60,7 +70,7 @@ export class AdminDashboardComponent implements OnInit {
             ),
 
             topDishes: restaurants.flatMap((r) =>
-                r.topDishes.map((d: any) => ({
+                r.topDishes.map((d: TopDish) => ({
                     id: d.id,
                     primaryText: d.dishName,
                     secondaryText: d.restaurantName,
@@ -75,35 +85,27 @@ export class AdminDashboardComponent implements OnInit {
         orders: number,
         completed: number,
         activeCount: number,
-    ): any[] {
+    ): StatCardData[] {
         return [
             {
                 title: 'Total Revenue',
                 value: `$${revenue.toFixed(2)}`,
-                icon: 'attach_money',
-                iconColor: '#0e9f6e',
-                iconBgColor: '#e2f4ed',
+                ...STAT_CARD_ICONS_AND_COLORS.revenue,
             },
             {
                 title: 'Total Orders',
                 value: orders.toString(),
-                icon: 'shopping_cart',
-                iconColor: '#3b82f6',
-                iconBgColor: '#e1effe',
+                ...STAT_CARD_ICONS_AND_COLORS.orders,
             },
             {
                 title: 'Completed Orders',
                 value: completed.toString(),
-                icon: 'check_circle',
-                iconColor: '#f59e0b',
-                iconBgColor: '#fdf3c7',
+                ...STAT_CARD_ICONS_AND_COLORS.completed,
             },
             {
                 title: 'Active Restaurants',
                 value: activeCount.toString(),
-                icon: 'restaurant',
-                iconColor: '#8b5cf6',
-                iconBgColor: '#ede9fe',
+                ...STAT_CARD_ICONS_AND_COLORS.active,
             },
         ];
     }
